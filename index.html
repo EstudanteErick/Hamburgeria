@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="carrosel.js" defer></script>
     <title>Menu Responsivo</title>
 </head>
 
@@ -35,6 +36,50 @@
             </ul>
         </div>
     </header>
+
+    <section class="slider">
+        <div class="slider-content">
+
+         <input type="radio" name="btn-radio" id="radio1">
+
+         <input type="radio" name="btn-radio" id="radio2">
+
+         <input type="radio" name="btn-radio" id="radio3">
+
+         <div class="slide-box primeiro">
+            <img class="img-desktop" src="imagens/banner1.png" alt="slide 1">
+
+            <img class="img-mobile" src="imagens/banner-mobile.png" alt="slide 1">
+         </div>
+
+         <div class="slide-box ">
+            <img class="img-desktop" src="imagens/banner2.png" alt="slide 2">
+
+            <img class="img-mobile" src="imagens/banner2-mobile.png" alt="slide 2">
+         </div>
+         
+         <div class="slide-box">
+            <img class="img-desktop" src="imagens/banner3.jpg" alt="slide 3">
+
+            <img class="img-mobile" src="imagens/banner3-mobile.jpg" alt="slide 3">
+         </div>
+
+         <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+         </div>
+
+         <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+
+            <label for="radio2" class="manual-btn"></label>
+
+            <label for="radio3" class="manual-btn"></label>
+         </div>
+
+        </div>
+    </section>
 
     <script src="mobile-navbar.js"></script>
 </body>
