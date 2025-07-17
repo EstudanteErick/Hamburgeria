@@ -954,6 +954,276 @@ header {
     border-color: #fff;
 }
 
+/* Rodapé */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: #fff;
+    padding: 60px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerpattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23fff" opacity="0.02"/><circle cx="80" cy="80" r="1" fill="%23fff" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23footerpattern)"/></svg>');
+    pointer-events: none;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #D9491E, #FFD700);
+    border-radius: 2px;
+}
+
+/* Seção da Empresa */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: #FFD700;
+    margin: 0;
+}
+
+.footer-description {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.6;
+    color: #bdc3c7;
+    margin-bottom: 25px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(135deg, #e1306c, #fd1d1d);
+}
+
+.social-btn.facebook {
+    background: linear-gradient(135deg, #1877f2, #42a5f5);
+}
+
+.social-btn.whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon {
+    font-size: 1.3rem;
+}
+
+/* Listas do Rodapé */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: #FFD700;
+    padding-left: 15px;
+}
+
+.footer-link::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #D9491E;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover::before {
+    opacity: 1;
+}
+
+/* Seção de Contato */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #bdc3c7;
+    line-height: 1.5;
+}
+
+/* Newsletter */
+.newsletter p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #bdc3c7;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    backdrop-filter: blur(10px);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-btn {
+    background: linear-gradient(135deg, #D9491E, #e55722);
+    border: none;
+    padding: 12px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.newsletter-btn:hover {
+    background: linear-gradient(135deg, #c23616, #D9491E);
+    transform: scale(1.05);
+}
+
+.footer-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-copyright p,
+.footer-credits p {
+    margin: 0;
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    color: #7f8c8d;
+}
+
+.footer-credits p {
+    text-align: right;
+}
+
 .card .product-image img {
     width: 100%;
 }
@@ -1103,6 +1373,129 @@ header {
     transition: all .3s;
     font-family: Arial, Helvetica, sans-serif;
 } 
+
+/*Rodapé*/
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer-content {
+    background-color: #171717;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-content h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer-social-media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer-social-media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#footer-social-media .footer-link  i {
+    font-size: 1.25rem;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: #a8a8a8;
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #cf8c10;
+}
+
+#footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer-subscribe p {
+    color: #a8a8a8;
+}
+
+#input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#input-group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input-group button {
+    background-color: #7f37c9;
+    border: none;
+    color: #fff;
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input-group button:hover {
+    opacity: 0.8;
+}
+
+#footer-copyright {
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e0e;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
 
 /* Responsividade para tablets */
 @media screen and (max-width: 1024px) {
@@ -1335,6 +1728,39 @@ header {
     .social-links {
         justify-content: center;
     }
+
+    /* Responsividade tablet do rodapé */
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .footer-section.company-info {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-credits p {
+        text-align: center;
+    }
+
+    /*Rodapé*/
+
+     #footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -1521,5 +1947,61 @@ header {
         max-width: 280px;
         justify-content: center;
         padding: 15px 25px;
+    }
+
+    /* Responsividade mobile do rodapé */
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .footer-badges {
+        justify-content: center;
+    }
+
+    .input-group {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-credits p {
+        text-align: center;
+    }
+
+    /* Rodapé */
+
+    #footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
